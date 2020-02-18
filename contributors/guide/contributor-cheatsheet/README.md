@@ -1,6 +1,7 @@
+<!-- omit in toc -->
 # Kubernetes Contributor Cheat Sheet
 
-[Deutsch](README-de.md) | [Français](README-fr.md) | [Bahasa Indonesia](README-id.md) | [日本語](README-ja.md) | [한국어](README-ko.md) | [Português](README-pt.md) | [中文](README-zh.md)
+[Deutsch](README-de.md) | [Français](README-fr.md) | [Bahasa Indonesia](README-id.md) | [日本語](README-ja.md) | [한국어](README-ko.md) | [Português](README-pt.md) | [中文](README-zh.md) | [Українська](README-uk.md)
 
 A list of common resources when contributing to Kubernetes, tips, tricks, and
 common best practices used within the Kubernetes project. It is a "TL;DR" or
@@ -8,33 +9,32 @@ quick reference of useful information to make your GitHub contribution experienc
 better.
 
 **Table of Contents**
-- [Kubernetes Contributor Cheat Sheet](#kubernetes-contributor-cheat-sheet)
-  - [Helpful Resources](#helpful-resources)
-    - [Getting Started](#getting-started)
-    - [SIGs and Other Groups](#sigs-and-other-groups)
-    - [Community](#community)
-    - [Workflow](#workflow)
-    - [Tests](#tests)
-    - [Important Email Aliases](#important-email-aliases)
-    - [Other Useful Links](#other-useful-links)
-  - [Communicating Effectively on GitHub](#communicating-effectively-on-github)
-    - [How to be Excellent to Each Other](#how-to-be-excellent-to-each-other)
-      - [Examples of Good/Bad Communication](#examples-of-goodbad-communication)
-  - [Submitting a Contribution](#submitting-a-contribution)
-    - [Signing the CLA](#signing-the-cla)
-    - [Opening and Responding to Issues](#opening-and-responding-to-issues)
-      - [Creating an Issue](#creating-an-issue)
-      - [Responding to an Issue](#responding-to-an-issue)
-    - [Opening a Pull Request](#opening-a-pull-request)
-      - [Creating a Pull Request](#creating-a-pull-request)
-      - [Example PR Description](#example-pr-description)
-      - [Troubleshooting a Pull Request](#troubleshooting-a-pull-request)
-    - [Labels](#labels)
-  - [Working Locally](#working-locally)
-    - [Branch Strategy](#branch-strategy)
-      - [Adding Upstream](#adding-upstream)
-      - [Keeping Your Fork in Sync](#keeping-your-fork-in-sync)
-      - [Squashing Commits](#squashing-commits)
+- [Helpful Resources](#helpful-resources)
+  - [Getting Started](#getting-started)
+  - [SIGs and Other Groups](#sigs-and-other-groups)
+  - [Community](#community)
+  - [Workflow](#workflow)
+  - [Tests](#tests)
+  - [Important Email Aliases](#important-email-aliases)
+  - [Other Useful Links](#other-useful-links)
+- [Communicating Effectively on GitHub](#communicating-effectively-on-github)
+  - [How to be Excellent to Each Other](#how-to-be-excellent-to-each-other)
+    - [Examples of Good/Bad Communication](#examples-of-goodbad-communication)
+- [Submitting a Contribution](#submitting-a-contribution)
+  - [Signing the CLA](#signing-the-cla)
+  - [Opening and Responding to Issues](#opening-and-responding-to-issues)
+    - [Creating an Issue](#creating-an-issue)
+    - [Responding to an Issue](#responding-to-an-issue)
+  - [Opening a Pull Request](#opening-a-pull-request)
+    - [Creating a Pull Request](#creating-a-pull-request)
+    - [Example PR Description](#example-pr-description)
+    - [Troubleshooting a Pull Request](#troubleshooting-a-pull-request)
+  - [Labels](#labels)
+- [Working Locally](#working-locally)
+  - [Branch Strategy](#branch-strategy)
+    - [Adding Upstream](#adding-upstream)
+    - [Keeping Your Fork in Sync](#keeping-your-fork-in-sync)
+    - [Squashing Commits](#squashing-commits)
 
 ---
 
@@ -218,6 +218,8 @@ other forms of work that would be stored within a git repository.
   till the `[WIP]` or hold is lifted.
 - If you have not had your PR reviewed, do not close and open a new PR with the
   same changes. Ping your reviewers in a comment with `@<github username>`.
+- If your PR isn't getting enough attention, post a link to the PR in the
+  `#pr-reviews` channel on Slack to find additional reviewers.
 
 
 #### Example PR Description
@@ -330,12 +332,13 @@ remotes.
 #### Keeping Your Fork in Sync
 
 Fetch all the changes from `upstream` and _"rebase"_ them on your local `master`
-branch. This will sync your local repo with the `upstream` project.
+branch. This will sync your local repo with the `upstream` project. Push the local changes to your `remote master`.
 
 ```
 git fetch upstream
 git checkout master
 git rebase upstream/master
+git push
 ```
 
 You should do this minimally before creating a new branch to work on your

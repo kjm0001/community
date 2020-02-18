@@ -107,7 +107,11 @@ be consistent across artifact types.
   contact info for the team associated with any given release can be
   found [here](https://git.k8s.io/sig-release/releases/).
 - *Y days*: Refers to business days (using the location local to the release-manager M-F).
-- *feature*: see "[Is My Thing a Feature?](http://git.k8s.io/features/README.md#is-my-thing-a-feature)
+- *enhancement*: see "[Is My Thing an Enhancement?](https://git.k8s.io/enhancements/README.md#is-my-thing-an-enhancement)
+- *[Enhancement Freeze](https://git.k8s.io/sig-release/releases/release_phases.md#enhancements-freeze)*: Usually during Week 4 of a release cycle: the deadline by which KEPs have to be completed in order for enhancements to be part of the current release
+- *[Exception Request](https://git.k8s.io/sig-release/releases/release_phases.md#exceptions)*: The process of requesting an extension on the deadline for a particular Enhancement
+- *[Code Freeze](https://git.k8s.io/sig-release/releases/release_phases.md#code-freeze)*: The period of ~4 weeks before the final release date, during which only critical bug fixes are merged into the release.
+- *[Pruning](https://git.k8s.io/sig-release/releases/release_phases.md#pruning)*: The process of removing an Enhancement from a release milestone if it is not fully implemented or is otherwise considered not stable.
 - *release milestone*: semantic version string or [GitHub milestone](https://help.github.com/articles/associating-milestones-with-issues-and-pull-requests/) referring to a release MAJOR.MINOR vX.Y version.  See also [release versioning](http://git.k8s.io/community/contributors/design-proposals/release/versioning.md)
 - *release branch*: Git branch "release-X.Y" created for the vX.Y milestone.  Created at the time of the vX.Y-beta.0 release and maintained after the release for approximately 9 months with vX.Y.Z patch releases.
 
@@ -135,6 +139,35 @@ starts ~4 weeks into release cycle.  By this point all intended
 feature work for the given release has been defined in suitable
 planning artifacts in conjunction with the Release Team's [enhancements
 lead](https://git.k8s.io/sig-release/release-team/role-handbooks/enhancements/README.md).
+
+After enhancement freeze, tracking milestones on PRs and Issues is
+important. Items within the milestone are used as a punchdown list to
+complete the release. *On issues*, milestones must be applied correctly, via
+triage by the SIG, so that release team can track bugs and enhancements (any
+enhancement related issue needs a milestone)
+
+There is some automation in place to help automatically-assign milestones to
+PRs. This automation only applies to the following repos:
+
+* kubernetes/enhancements
+* kubernetes/kubernetes
+* kubernetes/release
+* kubernetes/sig-release
+* kubernetes/test-infra
+
+At creation time, PRs against the master branch need humans to hint at which milestone
+they might want the PR to target. Once merged, PRs against the master branch have
+milestones auto-applied so from that time onward human management of that PR's
+milestone is less necessary. On PRs against anything not the master branch, milestones
+are auto-applied when the PR is created so no human management of the milestone
+is ever necessary.
+
+
+Any other effort that
+should be tracked by the release team that doesn't fall under that
+automation umbrella should be have a milestone applied.
+
+*"Milestone early and milestone often. Everyone will be happier."*
 
 Implementation and bugfixing is ongoing across the cycle, but
 culminates in a code freeze period:

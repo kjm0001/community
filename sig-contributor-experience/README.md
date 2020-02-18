@@ -13,7 +13,9 @@ Developing and sustaining a healthy community of contributors is critical to sca
 The [charter](charter.md) defines the scope and governance of the Contributor Experience Special Interest Group.
 
 ## Meetings
-* Regular SIG Meeting: [Wednesdays at 9:30 PT (Pacific Time)](https://docs.google.com/document/d/1FQx0BPlkkl1Bn0c9ocVBxYIKojpmrS1CFP5h0DI68AE/edit) (biweekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=9:30&tz=PT%20%28Pacific%20Time%29).
+* Biweekly Issue Triage: [Wednesdays at 10:30 PT (Pacific Time)](https://zoom.us/j/308291410) (biweekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=10:30&tz=PT%20%28Pacific%20Time%29).
+  * [Meeting recordings](https://www.youtube.com/watch?v=EMGUdOKwSns&list=PL69nYSiGNLP2x_48wbOPO0vXQgNTm_xxr).
+* Regular SIG Meeting: [Wednesdays at 9:30 PT (Pacific Time)](https://zoom.us/j/397264241) (biweekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=9:30&tz=PT%20%28Pacific%20Time%29).
   * [Meeting notes and Agenda](https://docs.google.com/document/d/1qf-02B7EOrItQgwXFxgqZ5qjW0mtfu5qkYIF1Hl4ZLI/).
   * [Meeting recordings](https://www.youtube.com/watch?v=EMGUdOKwSns&list=PL69nYSiGNLP2x_48wbOPO0vXQgNTm_xxr).
 
@@ -23,7 +25,7 @@ The [charter](charter.md) defines the scope and governance of the Contributor Ex
 The Chairs of the SIG run operations and processes governing the SIG.
 
 * Elsie Phillips (**[@Phillels](https://github.com/Phillels)**), Red Hat
-* Paris Pittman (**[@parispittman](https://github.com/parispittman)**), Google
+* Bob Killen (**[@mrbobbytables](https://github.com/mrbobbytables)**), University of Michigan
 
 ### Technical Leads
 The Technical Leads of the SIG establish new subprojects, decommission existing
@@ -34,19 +36,18 @@ subprojects, and resolve cross-subproject technical issues and decisions.
 
 ## Emeritus Leads
 
-* Garrett Rodrigues (**[@grodrigues3](https://github.com/grodrigues3)**), Google
+* Garrett Rodrigues (**[@grodrigues3](https://github.com/grodrigues3)**)
+* Paris Pittman (**[@parispittman](https://github.com/parispittman)**)
 
 ## Contact
 - Slack: [#sig-contribex](https://kubernetes.slack.com/messages/sig-contribex)
 - [Mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-contribex)
 - [Open Community Issues/PRs](https://github.com/kubernetes/community/labels/sig%2Fcontributor-experience)
 - GitHub Teams:
-    - [@kubernetes/sig-contributor-experience-bugs](https://github.com/orgs/kubernetes/teams/sig-contributor-experience-bugs) - Bug Triage and Troubleshooting
-    - [@kubernetes/sig-contributor-experience-feature-requests](https://github.com/orgs/kubernetes/teams/sig-contributor-experience-feature-requests) - Feature Requests
-    - [@kubernetes/sig-contributor-experience-misc-use-only-as-a-last-resort](https://github.com/orgs/kubernetes/teams/sig-contributor-experience-misc-use-only-as-a-last-resort) - General Discussion
+    - [@kubernetes/sig-contributor-experience](https://github.com/orgs/kubernetes/teams/sig-contributor-experience) - General Discussion
+    - [@kubernetes/sig-contributor-experience-apac-coordinators](https://github.com/orgs/kubernetes/teams/sig-contributor-experience-apac-coordinators) - APAC Coordinator Team
+    - [@kubernetes/sig-contributor-experience-leads](https://github.com/orgs/kubernetes/teams/sig-contributor-experience-leads) - Chairs and Technical Leads
     - [@kubernetes/sig-contributor-experience-pr-reviews](https://github.com/orgs/kubernetes/teams/sig-contributor-experience-pr-reviews) - PR Reviews
-    - [@kubernetes/sig-contributor-experience-proposals](https://github.com/orgs/kubernetes/teams/sig-contributor-experience-proposals) - Design Proposals
-    - [@kubernetes/sig-contributor-experience-test-failures](https://github.com/orgs/kubernetes/teams/sig-contributor-experience-test-failures) - Test Failures and Triage
 
 ## Subprojects
 
@@ -61,7 +62,9 @@ Manages operations and policy for upstream community group communication platfor
   - https://raw.githubusercontent.com/kubernetes-sigs/discuss-theme/master/OWNERS
   - https://raw.githubusercontent.com/kubernetes/community/master/communication/OWNERS
 - **Meetings:**
-  - APAC Coordinator Meeting: [Thursdays at 5:00 UTC](https://docs.google.com/document/d/1qf-02B7EOrItQgwXFxgqZ5qjW0mtfu5qkYIF1Hl4ZLI/edit) (biweekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=5:00&tz=UTC).
+  - APAC Coordinator Meeting: [Thursdays at 5:00 UTC](https://zoom.us/j/144440337) (biweekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=5:00&tz=UTC).
+  - Marketing Team Meeting: [Fridays at 8:00 PT (Pacific Time)](https://zoom.us/j/596959769) (weekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=8:00&tz=PT%20%28Pacific%20Time%29).
+    - [Meeting recordings](https://www.youtube.com/watch?v=EMGUdOKwSns&list=PL69nYSiGNLP2x_48wbOPO0vXQgNTm_xxr).
 ### contributors-documentation
 writes and maintains documentation around contributing to Kubernetes, including the Contributor's Guide, Developer's Guide, and contributor website.
 - **Owners:**
@@ -88,6 +91,8 @@ Manages and controls Github permissions, repos, and groups, including Org Member
 - **Owners:**
   - https://raw.githubusercontent.com/kubernetes/community/master/github-management/OWNERS
   - https://raw.githubusercontent.com/kubernetes/org/master/OWNERS
+- **Meetings:**
+  - GitHub Administration Subproject: [Thursdays at 09:30 PT (Pacific Time)](https://docs.google.com/document/d/1IiVrr1hcFWmbboExk971FsMUGfr2Wp68mdMribCuzLs/edit) (monthly on 4th Thursday). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=09:30&tz=PT%20%28Pacific%20Time%29).
 ### k8s.io
 Creates and maintains shortcuts and automation apps running in the k8s.io domain.
 - **Owners:**

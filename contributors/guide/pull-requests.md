@@ -1,33 +1,35 @@
 ---
 title: "Pull Request Process"
-weight: 1
+weight: 5
 slug: "pull-requests"
 ---
 
 This doc explains the process and best practices for submitting a pull request to the [Kubernetes project](https://github.com/kubernetes/kubernetes) and its associated sub-repositories. It should serve as a reference for all contributors, and be useful especially to new and infrequent submitters.
 
 - [Before You Submit a Pull Request](#before-you-submit-a-pull-request)
-  * [Run Local Verifications](#run-local-verifications)
+  - [Run Local Verifications](#run-local-verifications)
 - [The Pull Request Submit Process](#the-pull-request-submit-process)
-  * [The Testing and Merge Workflow](#the-testing-and-merge-workflow)
-  * [Marking Unfinished Pull Requests](#marking-unfinished-pull-requests)
-  * [Comment Commands Reference](#comment-commands-reference)
-  * [Automation](#automation)
-  * [How the e2e Tests Work](#how-the-e2e-tests-work)
-- [Why was my Pull Request closed?](#why-was-my-pull-request-closed)
-- [Why is my Pull Request not getting reviewed?](#why-is-my-pull-request-not-getting-reviewed)
+  - [The Testing and Merge Workflow](#the-testing-and-merge-workflow)
+  - [More About Ok-To-Test](#more-about-ok-to-test)
+  - [Marking Unfinished Pull Requests](#marking-unfinished-pull-requests)
+  - [Pull Requests and the Release Cycle](#pull-requests-and-the-release-cycle)
+  - [Comment Commands Reference](#comment-commands-reference)
+  - [Automation](#automation)
+  - [How the e2e Tests Work](#how-the-e2e-tests-work)
+- [Why was my pull request closed?](#why-was-my-pull-request-closed)
+- [Why is my pull request not getting reviewed?](#why-is-my-pull-request-not-getting-reviewed)
 - [Best Practices for Faster Reviews](#best-practices-for-faster-reviews)
-  * [0. Familiarize yourself with project conventions](#0-familiarize-yourself-with-project-conventions)
-  * [1. Is the feature wanted? File a Kubernetes Enhancement Proposal](#1-is-the-feature-wanted-file-a-kubernetes-enhancement-proposal)
-  * [2. Smaller Is Better: Small Commits, Small Pull Requests](#2-smaller-is-better-small-commits-small-pull-requests)
-  * [3. Open a Different Pull Request for Fixes and Generic Features](#3-open-a-different-pull-request-for-fixes-and-generic-features)
-  * [4. Comments Matter](#4-comments-matter)
-  * [5. Test](#5-test)
-  * [6. Squashing and Commit Titles](#6-squashing-and-commit-titles)
-  * [7. KISS, YAGNI, MVP, etc.](#7-kiss-yagni-mvp-etc)
-  * [8. It's OK to Push Back](#8-its-ok-to-push-back)
-  * [9. Common Sense and Courtesy](#9-common-sense-and-courtesy)
-  * [10. Trivial Edits](#10-trivial-edits)
+  - [0. Familiarize yourself with project conventions](#0-familiarize-yourself-with-project-conventions)
+  - [1. Is the feature wanted? File a Kubernetes Enhancement Proposal](#1-is-the-feature-wanted-file-a-kubernetes-enhancement-proposal)
+  - [2. Smaller Is Better: Small Commits, Small Pull Requests](#2-smaller-is-better-small-commits-small-pull-requests)
+  - [3. Open a Different Pull Request for Fixes and Generic Features](#3-open-a-different-pull-request-for-fixes-and-generic-features)
+  - [4. Comments Matter](#4-comments-matter)
+  - [5. Test](#5-test)
+  - [6. Squashing and Commit Titles](#6-squashing-and-commit-titles)
+  - [7. KISS, YAGNI, MVP, etc.](#7-kiss-yagni-mvp-etc)
+  - [8. It's OK to Push Back](#8-its-ok-to-push-back)
+  - [9. Common Sense and Courtesy](#9-common-sense-and-courtesy)
+  - [10. Trivial Edits](#10-trivial-edits)
 
 # Before You Submit a Pull Request
 
@@ -62,7 +64,7 @@ The Kubernetes merge workflow uses labels, applied by [commands](https://prow.k8
 
 _Example:_ To apply a SIG label, you would type in a comment:
 ```
-/sig aws
+/sig apps
 ```
 
 *NOTE: For pull requests that are in progress but not ready for review,
@@ -107,6 +109,25 @@ easily see all criteria that are not being met and address them.
 1. If tests pass, Tide automatically merges the pull request
 
 That's the last step. Your pull request is now merged.
+
+## More About `Ok-To-Test`
+
+- The ok-to-test label is applied by org members to PRs from external contributors, it signals that the PR can be tested.
+- For a Contributor, an `ok-to-test` label means the regular CI tests will be run for their PR.
+- For the reviewer or the member, labelling the PR with `ok-to-test` it means a lot more:
+    - They need to take care if the PR is not a wastage of our `CI/CD` resources.
+    - Is the PR worth testing or does it need more changes before going through the `CI/CD` process?
+    - Is the PR getting used to run malicious code to misuse our resources ?
+- An `ok-to-test` label may reduce the workload and smoothens the contributors experience as they can know if there is any failing test. If there is, you can fix the test and they don't have to wait for a long time to get a review from `maintainer/assignee`.
+- There are various other factors on which labelling of `ok-to-test` depends :
+    - Size of PR :
+        - If the PR is of `size/S` or `size/M` which is just to fix a grammatical error or spelling mistake, the reviewer can trigger the `CI/CD` without having a second thought.
+        - If the PR is of `size/XXL` which aims at adding a new feature, a new API endpoint or any new substantial feature. There needs to other conventions & process to be followed regarding the change made. Hence it may have a slight to delay to get labelled with `ok-to-test`.
+    - Other org members who are not assigned to the following PR may also label `ok-to-test` , if the change is small.
+    - If the PR is labelled with `cncf-cla: no`, then it is better to wait before labelling `ok-to-test`.
+    - PRs with tag `do-not-merge/hold` or `needs-rebase` should make the appropriate changes before the PR can be labelled `ok-to-test`.
+    - PRs created by mistake without to meaningful change of code should not be labelled `ok-to-test` and closed.
+
 
 ## Marking Unfinished Pull Requests
 
@@ -171,6 +192,8 @@ things you can do to move the process along:
 
    * If you have fixed all the issues from a review, and you haven't heard back, you should ping the assignee on the comment stream with a "please take another look" (`PTAL`) or similar comment indicating that you are ready for another review.
 
+   * If you still don't hear back, post a link to the pull request in the `#pr-reviews` channel on Slack to find additional reviewers.
+
 Read on to learn more about how to get faster reviews by following best practices.
 
 # Best Practices for Faster Reviews
@@ -228,7 +251,7 @@ We want every pull request to be useful on its own, so use your best judgment on
 
 As a rule of thumb, if your pull request is directly related to Feature-X and nothing else, it should probably be part of the Feature-X pull request. If you can explain why you are doing seemingly no-op work ("it makes the Feature-X change easier, I promise") we'll probably be OK with it. If you can imagine someone finding value independently of Feature-X, try it as a pull request. (Do not link pull requests by `#` in a commit description, because GitHub creates lots of spam. Instead, reference other pull requests via the pull request your commit is in.)
 
-## 3. Open a Different pull request for Fixes and Generic Features
+## 3. Open a Different Pull Request for Fixes and Generic Features
 
 **Put changes that are unrelated to your feature into a different pull request.**
 

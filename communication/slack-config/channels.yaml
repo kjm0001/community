@@ -3,9 +3,13 @@
 
 channels:
   - name: airflow-operator
+  - name: aks-engine-users
+  - name: aks-engine-devs
   - name: announcements
+  - name: antrea
   - name: api-reviews
   - name: apisnoop
+  - name: app-troubleshoot
   - name: archived-sig-release
     archived: true
   - name: argentina
@@ -26,24 +30,14 @@ channels:
   - name: cka-exam-prep
   - name: ckad-exam-prep
   - name: client-go-docs
-  - name: provider-aws
-    id: C0LRMHZ1T
-  - name: provider-azure
-    id: C5HJXTT9Q
-  - name: provider-gcp
-    id: C6WB33KNJ
-  - name: provider-ibmcloud
-    id: C90BWDWCE
-  - name: provider-openstack
-    id: C0LSA3T7C
-  - name: provider-vsphere
-    id: C9PGCDKV5
   - name: cluster-addons
   - name: cluster-api
   - name: cluster-api-aws
   - name: cluster-api-azure
   - name: cluster-api-baremetal
+  - name: cluster-api-digitalocean
   - name: cluster-api-docker
+    archived: true
   - name: cluster-api-openstack
   - name: cluster-api-vsphere
   - name: cn-dev
@@ -53,12 +47,14 @@ channels:
   - name: compliance-hipaa
   - name: contour
   - name: contributor-summit
+  - name: crash-diagnostics
   - name: crd-installation
   - name: crio
   - name: de-events
   - name: de-users
   - name: devstats
   - name: digitalocean-k8s
+  - name: distroless
   - name: diversity
   - name: draft-dev
   - name: draft-users
@@ -75,6 +71,7 @@ channels:
   - name: falco
   - name: fiaas
   - name: fi-users
+  - name: flink-operator
   - name: fr-events
   - name: fr-users
   - name: garden
@@ -103,6 +100,7 @@ channels:
   - name: in-events
   - name: in-users
   - name: ingress-nginx
+  - name: inspektor-gadget
   - name: it-events
   - name: it-users
   - name: java
@@ -112,8 +110,10 @@ channels:
   - name: jp-dev
   - name: jp-events
   - name: jp-users
+  - name: jp-users-novice
   - name: jsonnet
   - name: k14s
+  - name: kaniko
   - name: k8s-code-organization
   - name: k8s-conformance
   - name: k8s-dual-stack
@@ -128,12 +128,16 @@ channels:
   - name: knative
   - name: kompose
   - name: kong
+  - name: konveyor
   - name: kops-dev
   - name: kops-users
+  - name: kots
+    id: CFFKXV0JZ
   - name: kr-dev
   - name: kr-users
   - name: kraken
   - name: krane
+  - name: krew
   - name: krex
   - name: kube-aws
   - name: kube-deploy
@@ -153,6 +157,7 @@ channels:
   - name: kubekhan
     archived: true
   - name: kubeless
+  - name: kubemove
   - name: kubeone
   - name: kubepack
   - name: kubestack
@@ -172,6 +177,7 @@ channels:
   - name: kubespray-dev
   - name: kubicorn
   - name: kudo
+  - name: kurl
   - name: kustomize
   - name: kyverno
   - name: leadership-summit
@@ -188,6 +194,7 @@ channels:
   - name: meetup-boston
   - name: meetup-dfw
   - name: meetup-edinburgh
+  - name: meetup-egypt
   - name: meetup-guatemala
   - name: meetup-hannover
   - name: meetup-hongkong
@@ -206,6 +213,7 @@ channels:
   - name: meetup-tunisia
   - name: metacontroller
   - name: metallb
+  - name: metallb-dev
   - name: microk8s
   - name: minikube
   - name: minikube-dev
@@ -216,6 +224,8 @@ channels:
   - name: mysql-operator
   - name: nais
   - name: navigator
+    archived: true
+  - name: ncw-staff
   - name: nl-users
   - name: node-problem-detector
   - name: norw-users
@@ -235,10 +245,11 @@ channels:
   - name: pharmer
   - name: pl-users
   - name: pr-reviews
+  - name: prod-readiness
   - name: prometheus
   - name: prometheus-operator
-  - name: provider-centurylink
   - name: prow
+  - name: prow-alerts
   - name: pt_br-users
   - name: rancher
   - name: random
@@ -247,9 +258,9 @@ channels:
   - name: ro-users
   - name: ru-users
   - name: scaleway-k8s
+  - name: schemahero
   - name: se-users
   - name: sealed-secrets
-  - name: ship
   - name: shippable
   - name: shipper
   - name: shoutouts
@@ -259,7 +270,6 @@ channels:
   - name: sig-auth
   - name: sig-autoscaling
   - name: sig-cli
-  - name: sig-cloud-provider
   - name: sig-clstr-life-leads
   - name: sig-cluster-lifecycle
   - name: sig-cluster-ops
@@ -293,14 +303,17 @@ channels:
   - name: skaffold
   - name: slack-admins
   - name: slack-infra
+  - name: solr-operator
   - name: sonobuoy
   - name: spark-operator
   - name: spinnaker
   - name: sre
+  - name: steering-committee
   - name: summit-staff
   - name: suse-caasp
   - name: talk-proposals
   - name: terraform-providers
+  - name: test-failures
   - name: testing-commons
   - name: testing-ops
   - name: tilt
@@ -313,6 +326,7 @@ channels:
   - name: tw-users
   - name: ug-big-data
     id: C0ELB338T
+  - name: ug-vmware
   - name: velero
   - name: virtlet
   - name: virtual-kubelet
@@ -324,6 +338,7 @@ channels:
   - name: wg-apply
   - name: wg-component-standard
   - name: wg-component-standard-mentorship
+  - name: wg-data-protection
   - name: wg-iot-edge
   - name: wg-k8s-infra
   - name: wg-lts

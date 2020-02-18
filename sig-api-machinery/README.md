@@ -25,6 +25,13 @@ The [charter](charter.md) defines the scope and governance of the API Machinery 
 The Chairs of the SIG run operations and processes governing the SIG.
 
 * David Eads (**[@deads2k](https://github.com/deads2k)**), Red Hat
+* Federico Bongiovanni (**[@fedebongio](https://github.com/fedebongio)**), Google
+
+### Technical Leads
+The Technical Leads of the SIG establish new subprojects, decommission existing
+subprojects, and resolve cross-subproject technical issues and decisions.
+
+* David Eads (**[@deads2k](https://github.com/deads2k)**), Red Hat
 * Daniel Smith (**[@lavalamp](https://github.com/lavalamp)**), Google
 
 ## Contact
@@ -53,7 +60,8 @@ The following [subprojects][subproject-definition] are owned by sig-api-machiner
   - https://raw.githubusercontent.com/kubernetes-sigs/kube-storage-version-migrator/master/OWNERS
   - https://raw.githubusercontent.com/kubernetes/kubernetes/master/pkg/controller/garbagecollector/OWNERS
   - https://raw.githubusercontent.com/kubernetes/kubernetes/master/pkg/controller/namespace/OWNERS
-  - https://raw.githubusercontent.com/kubernetes/kubernetes/master/pkg/quota/OWNERS
+  - https://raw.githubusercontent.com/kubernetes/kubernetes/master/pkg/controller/resourcequota/OWNERS
+  - https://raw.githubusercontent.com/kubernetes/kubernetes/master/pkg/quota/v1/OWNERS
 ### idl-schema-client-pipeline
 - **Owners:**
   - https://raw.githubusercontent.com/kubernetes-client/gen/master/OWNERS

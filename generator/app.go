@@ -68,7 +68,7 @@ func (x FoldedString) MarshalYAML() (interface{}, error) {
 type Person struct {
 	GitHub  string
 	Name    string
-	Company string
+	Company string `yaml:"company,omitempty"`
 }
 
 // Meeting represents a regular meeting for a group.
@@ -120,6 +120,29 @@ func (g *LeadershipGroup) PrefixToPersonMap() map[string][]Person {
 		"tech_lead":     g.TechnicalLeads,
 		"emeritus_lead": g.EmeritusLeads,
 	}
+}
+
+// Owners returns a sorted and de-duped list of owners for a LeadershipGroup
+func (g *LeadershipGroup) Owners() []Person {
+	o := append(g.Chairs, g.TechnicalLeads...)
+
+	// Sort
+	sort.Slice(o, func(i, j int) bool {
+		return o[i].GitHub < o[j].GitHub
+	})
+
+	// De-dupe
+	seen := make(map[string]struct{}, len(o))
+	i := 0
+	for _, p := range o {
+		if _, ok := seen[p.GitHub]; ok {
+			continue
+		}
+		seen[p.GitHub] = struct{}{}
+		o[i] = p
+		i++
+	}
+	return o[:i]
 }
 
 // Group represents either a Special Interest Group (SIG) or a Working Group (WG)
@@ -233,11 +256,15 @@ func (c *Context) Validate() []error {
 			for prefix, persons := range group.Leadership.PrefixToPersonMap() {
 				for _, person := range persons {
 					if val, ok := people[person.GitHub]; ok {
-						if val.Name != person.Name || val.Company != person.Company {
+						if val.Name != person.Name || (prefix != "emeritus_lead" && val.Company != person.Company) {
 							errors = append(errors, fmt.Errorf("%s: %ss: expected person: %v, got: %v", group.Dir, prefix, val, person))
 						}
-					} else {
+					} else if prefix != "emeritus_lead" {
 						people[person.GitHub] = person
+					}
+
+					if prefix == "emeritus_lead" && person.Company != "" {
+						errors = append(errors, fmt.Errorf("%s: emeritus leads should not have company specified; company specified for: %s", group.Dir, person.Name))
 					}
 				}
 			}

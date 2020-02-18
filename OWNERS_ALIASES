@@ -1,6 +1,7 @@
 aliases:
   sig-api-machinery-leads:
     - deads2k
+    - fedebongio
     - lavalamp
   sig-apps-leads:
     - janetkuo
@@ -12,34 +13,33 @@ aliases:
     - dims
     - johnbelamaric
   sig-auth-leads:
-    - enj
-    - mikedanese
-    - tallclair
     - deads2k
+    - enj
     - liggitt
     - mikedanese
+    - tallclair
   sig-autoscaling-leads:
     - mwielgus
   sig-cli-leads:
-    - seans3
-    - soltysh
     - pwittrock
+    - seans3
     - soltysh
   sig-cloud-provider-leads:
     - andrewsykim
     - cheftako
   sig-cluster-lifecycle-leads:
+    - fabriziopandini
     - justinsb
-    - luxas
+    - neolit123
     - timothysc
   sig-contributor-experience-leads:
     - Phillels
-    - parispittman
     - cblecker
+    - mrbobbytables
     - nikhita
   sig-docs-leads:
-    - Bradamant3
     - jimangel
+    - kbarnard10
     - zacharysarah
   sig-instrumentation-leads:
     - brancz
@@ -64,22 +64,21 @@ aliases:
     - justaugustus
     - tpepper
   sig-scalability-leads:
+    - mm4tt
     - shyamjvs
     - wojtek-t
   sig-scheduling-leads:
+    - Huang-Wei
     - ahg-g
-    - k82cn
   sig-service-catalog-leads:
     - jberkhahn
     - mszostok
   sig-storage-leads:
-    - childsb
     - saad-ali
   sig-testing-leads:
     - fejta
     - spiffxp
     - stevekuznetsov
-    - timothysc
   sig-ui-leads:
     - danielromlein
     - floreks
@@ -92,21 +91,25 @@ aliases:
     - vllry
   sig-windows-leads:
     - PatrickLang
-    - michmike
     - benmoss
     - ddebroy
+    - michmike
   wg-apply-leads:
     - lavalamp
   wg-component-standard-leads:
     - mtaufen
     - stealthybox
     - sttts
+  wg-data-protection-leads:
+    - xing-yang
+    - yuxiangqian
   wg-iot-edge-leads:
     - cantbewong
     - cindyxing
     - dejanb
     - ptone
   wg-k8s-infra-leads:
+    - bartsmykla
     - dims
     - spiffxp
   wg-lts-leads:
@@ -115,19 +118,15 @@ aliases:
     - tpepper
     - youngnick
   wg-machine-learning-leads:
-    - ConnorDoyle
-    - balajismaniam
+    - k82cn
     - kow3ns
     - vishh
   wg-multitenancy-leads:
     - srampal
     - tashimi
   wg-policy-leads:
-    - easeway
     - ericavonb
     - hannibalhuang
-    - mdelder
-    - tsandall
   wg-resource-management-leads:
     - derekwaynecarr
     - vishh
@@ -141,19 +140,22 @@ aliases:
     - foxish
     - liyinan926
   ug-vmware-users-leads:
+    - brysonshepherd
     - cantbewong
     - mylesagray
+    - phenixblue
   committee-code-of-conduct:
+    - AevaOnline
     - Bradamant3
     - carolynvs
-    - eparis
     - jdumars
-    - parispittman
+    - tashimi
   committee-product-security:
     - cjcullen
     - joelsmith
     - jonpulsifer
     - liggitt
+    - lukehinds
     - philips
     - tallclair
   committee-steering:

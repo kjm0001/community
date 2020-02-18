@@ -13,14 +13,14 @@ Covers documentation, doc processes, and doc publishing for Kubernetes.
 The [charter](charter.md) defines the scope and governance of the Docs Special Interest Group.
 
 ## Meetings
-* APAC SIG Meeting: [Wednesdays at 02:00 UTC](https://docs.google.com/document/d/1zg6By77SGg90EVUrhDIhopjZlSDg2jCebU-Ks9cYx0w/edit) (monthly - fourth Wednesday every month). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=02:00&tz=UTC).
-  * [Meeting notes and Agenda](https://docs.google.com/document/d/1Ds87eRiNZeXwRBEbFr6Z7ukjbTow5RQcNZLaSvWWQsE/edit).
+* APAC SIG Meeting: [Wednesdays at 02:00 UTC](https://docs.google.com/document/d/1ddHwLK3kUMX1wVFIwlksjTk0MsqitBnWPe1LRa1Rx5A/edit) (monthly - Wednesday, after the fourth Tuesday, every month). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=02:00&tz=UTC).
+  * [Meeting notes and Agenda](https://docs.google.com/document/d/1ddHwLK3kUMX1wVFIwlksjTk0MsqitBnWPe1LRa1Rx5A/edit).
   * [Meeting recordings](https://www.youtube.com/playlist?list=PL69nYSiGNLP3b5hlx0YV7Lo7DtckM84y8).
 * Korean Team Meeting: [Thursdays at 13:00 UTC](https://docs.google.com/document/d/1h5sMhBpPB5unJmBAS7KzDiPs-_eFQOu5o4UyHwMtFCA/edit) (biweekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=13:00&tz=UTC).
   * [Meeting notes and Agenda](https://docs.google.com/document/d/1h5sMhBpPB5unJmBAS7KzDiPs-_eFQOu5o4UyHwMtFCA/edit).
   * [Meeting recordings](https://www.youtube.com/playlist?list=PLAOP7m08QDCWZ7RwGca6cU4vzrOMw3ht7).
-* Regular SIG Meeting: [Tuesdays at 17:30 UTC](https://docs.google.com/document/d/1zg6By77SGg90EVUrhDIhopjZlSDg2jCebU-Ks9cYx0w/edit) (weekly - except fourth Tuesday every month). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=17:30&tz=UTC).
-  * [Meeting notes and Agenda](https://docs.google.com/document/d/1Ds87eRiNZeXwRBEbFr6Z7ukjbTow5RQcNZLaSvWWQsE/edit).
+* Regular SIG Meeting: [Tuesdays at 17:30 UTC](https://docs.google.com/document/d/1ddHwLK3kUMX1wVFIwlksjTk0MsqitBnWPe1LRa1Rx5A/edit) (weekly - except fourth Tuesday every month). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=17:30&tz=UTC).
+  * [Meeting notes and Agenda](https://docs.google.com/document/d/1ddHwLK3kUMX1wVFIwlksjTk0MsqitBnWPe1LRa1Rx5A/edit).
   * [Meeting recordings](https://www.youtube.com/playlist?list=PL69nYSiGNLP3b5hlx0YV7Lo7DtckM84y8).
 
 ## Leadership
@@ -28,14 +28,15 @@ The [charter](charter.md) defines the scope and governance of the Docs Special I
 ### Chairs
 The Chairs of the SIG run operations and processes governing the SIG.
 
-* Jennifer Rondeau (**[@Bradamant3](https://github.com/Bradamant3)**), Stripe
 * Jim Angel (**[@jimangel](https://github.com/jimangel)**), General Motors
+* Kaitlyn Barnard (**[@kbarnard10](https://github.com/kbarnard10)**), Kong
 * Zach Corleissen (**[@zacharysarah](https://github.com/zacharysarah)**), Linux Foundation
 
 ## Emeritus Leads
 
-* Andrew Chen (**[@chenopis](https://github.com/chenopis)**), Google
-* Jared Bhatti (**[@jaredbhatti](https://github.com/jaredbhatti)**), Google
+* Jennifer Rondeau (**[@Bradamant3](https://github.com/Bradamant3)**)
+* Andrew Chen (**[@chenopis](https://github.com/chenopis)**)
+* Jared Bhatti (**[@jaredbhatti](https://github.com/jaredbhatti)**)
 
 ## Contact
 - Slack: [#sig-docs](https://kubernetes.slack.com/messages/sig-docs)
@@ -53,8 +54,10 @@ The Chairs of the SIG run operations and processes governing the SIG.
     - [@kubernetes/sig-docs-ja-owners](https://github.com/orgs/kubernetes/teams/sig-docs-ja-owners) - Japanese language content
     - [@kubernetes/sig-docs-ko-owners](https://github.com/orgs/kubernetes/teams/sig-docs-ko-owners) - Korean language content
     - [@kubernetes/sig-docs-maintainers](https://github.com/orgs/kubernetes/teams/sig-docs-maintainers) - Documentation maintainers
+    - [@kubernetes/sig-docs-pl-owners](https://github.com/orgs/kubernetes/teams/sig-docs-pl-owners) - Polish language content
     - [@kubernetes/sig-docs-pr-reviews](https://github.com/orgs/kubernetes/teams/sig-docs-pr-reviews) - Documentation PR reviews
     - [@kubernetes/sig-docs-pt-owners](https://github.com/orgs/kubernetes/teams/sig-docs-pt-owners) - Portuguese language content
+    - [@kubernetes/sig-docs-uk-owners](https://github.com/orgs/kubernetes/teams/sig-docs-uk-owners) - Ukrainian language content
     - [@kubernetes/sig-docs-zh-owners](https://github.com/orgs/kubernetes/teams/sig-docs-zh-owners) - Chinese language content
 
 ## Subprojects
